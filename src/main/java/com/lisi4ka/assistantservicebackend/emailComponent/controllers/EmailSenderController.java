@@ -16,7 +16,6 @@ public class EmailSenderController {
 
     @PostMapping("/send-email")
     public void sendEmail(@RequestBody EmailData emailData) {
-        System.out.println(emailData.getEmail() + " " + emailData.getName() + " " + emailData.getMessage());
         emailService.sendEmail(emailData.getEmail(), emailData.getName(), emailData.getMessage());
     }
 }
